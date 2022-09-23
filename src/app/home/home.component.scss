@@ -1,68 +1,105 @@
+@import 'src/styles.scss';
+
 :host {
 
     display: flex;
-   position: relative;
+    position: relative;
 
     flex-direction: row;
     flex-wrap: wrap;
 
-    align-items: center;
-    justify-content: flex-start;
-
-    width: 100vw;
+    gap: 0px;
     
-
     .content {
-        position: absolute;
+        
+        display: flex;
+        position: relative;
         flex-direction: column;
-        padding: 20px;
-        top: 28em;
+        padding: 30px;
+
+        gap: 20px;
 
         .productName {
             display: flex;
             flex-direction: row;
             width: 100%;
             align-items: center;
+            font-size: 1.1em;
 
             .badge {
                 font-weight: 700;
                 color: white;
-                background-color: black;
+                background-color: $veryDarkBlue;
                 padding: 3px 10px;
                 border-radius: 20px;
             }
 
             .name {
-                font-weight: 400;
+                font-weight: 500;
                 letter-spacing: 4px;
-                color: rgba($color: black, $alpha: .5);
+                color: $grayishBlue;
                 padding-left: 20px;
             }
         }
 
         .productInfo {
 
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            padding-bottom: 1vw;
+
             .title {
-                font-size: 2em;
+                font-size: 2.6em;
+                line-height: 1em;
+                font-weight: 700;
+                color: $veryDarkBlue;
 
             }
 
             .description {
+
+                font-family: 'Barlow', sans-serif;
+                font-size: 1.2em;
+                max-inline-size: 75vw;
+                color: $darkGrayishBlue;
 
             }
 
         }
 
         .actions {
+
             display: flex;
             flex-direction: row;
             width: 100%;
 
+            align-items: center;
+
             .actionButton {
+
+                padding: 12px;
+                width: 130px;
+                background-color: $primaryRed;
+                border-radius: 5px;
+
+                color: $lightGrayishBlue;
+                text-align: center;
+                font-size: .9em;
+                font-weight: 700;
+                letter-spacing: 1.2px;
 
             }
 
             .actionDescription {
+
+                
+                padding-left: 20px;
+                text-align: center;
+                font-size: .9em;
+                letter-spacing: 2px;
+                color: $grayishBlue;
 
             }
 
@@ -72,39 +109,63 @@
 
     .hero {
 
-        max-width: 100vw;
         position: relative;
+        display: flex;
 
+        width: 100vw;
+        height: 55vh;
 
         .background {
 
             position: absolute;
-            background-color: rgba($color: grey, $alpha: .2);
+            background-color: $lightGrayishBlue;
             
-            width: 100vw;
-            height: 38em;
+            width: 80vw;
+            height: 60vh;
+
+            top: -10%;
 
             border-radius: 60px;
 
-            top: -10em;
+            left: 47vw;
             
         }
 
         .image {
-            
+
             position: absolute;
-            height: 15em;
-            top: 8em;
-            
-            
+
+            height: 30vh;
+            top: 15vh;
+            padding-left: 2vw;
+
         }
 
     }
 
     @media (min-width: 600px) {
 
+        height: 100vh;
+        max-width: 100vw;
+        align-items: center;
+
+        flex-direction: row;
+        justify-content: space-between;
+
         .content {
-            top: 0em;
+            padding-left: 10vw;
+            
+            max-width: 30vw;
+
+            .productInfo {
+                .title {
+                    font-size: 4vw;
+                }
+
+                .description {
+                    max-inline-size: 20vw;
+                }
+            }
         }
 
         .hero {
@@ -115,14 +176,14 @@
             .background {
     
                 position: fixed;
-                background-color: rgba($color: grey, $alpha: .2);
+                
 
                 width: 70vw;
-                height: 38em;
+                height: 60vh;
     
                 border-radius: 60px;
     
-                top: -15em;
+                top: -10vh;
                 right: -20vw;
     
             }
@@ -130,8 +191,8 @@
             .image {
                 
                 position: fixed;
-                height: 30em;
-                top: 9em;
+                height: 50vh;
+                top: 27vh;
                 left: 51vw;
             }
             
