@@ -1,0 +1,13 @@
+:host {
+
+    display: flex;
+
+    .navBar {
+        position: fixed;
+    }
+
+    .home {
+        position: relative;
+        width: 100vw;
+    }
+}
