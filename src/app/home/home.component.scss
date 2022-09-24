@@ -15,7 +15,9 @@
         display: flex;
         position: relative;
         flex-direction: column;
-        padding: 30px;
+        padding-left: 7.5vw;
+
+        
 
         gap: 20px;
 
@@ -90,6 +92,11 @@
                 font-weight: 700;
                 letter-spacing: 1.2px;
 
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgba($primaryRed, $alpha: .8);
+                }
+
             }
 
             .actionDescription {
@@ -153,9 +160,12 @@
         justify-content: space-between;
 
         .content {
-            padding-left: 10vw;
-            
+
+            padding-left: 7.5vw;
             max-width: 30vw;
+
+            padding-top: 10vh;
+            
 
             .productInfo {
                 .title {

@@ -4,18 +4,18 @@
         <img src="assets/images/logo.svg" alt="logo" class="logo">
         <img src="assets/images/icon-hamburger.svg" alt="menu" 
         class="open"
-        (click)="menuAction()"
-        [class.showDiv]="!menuIsOpened"
+        (click)="navService.dropdownAction()"
+        [class.showDiv]="!navService.isDropdownOpened"
         >
         <img src="assets/images/icon-close.svg" alt="menu" 
         class="close"
-        (click)="menuAction()"
-        [class.showDiv]="menuIsOpened"
+        (click)="navService.dropdownAction()"
+        [class.showDiv]="navService.isDropdownOpened"
         >
     </div>
 
         <div class="barItems"
-        [class.showMenu]="menuIsOpened"
+        [class.showMenu]="navService.isDropdownOpened"
         >
 
             <div class="product">PRODUCT</div>
