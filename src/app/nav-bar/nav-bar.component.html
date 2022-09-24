@@ -1,1 +1,30 @@
-<p>nav-bar works!</p>
+<div class="content">
+
+    <div class="bar">
+        <img src="assets/images/logo.svg" alt="logo" class="logo">
+        <img src="assets/images/icon-hamburger.svg" alt="menu" 
+        class="open"
+        (click)="menuAction()"
+        [class.showDiv]="!menuIsOpened"
+        >
+        <img src="assets/images/icon-close.svg" alt="menu" 
+        class="close"
+        (click)="menuAction()"
+        [class.showDiv]="menuIsOpened"
+        >
+    </div>
+
+        <div class="barItems"
+        [class.showMenu]="menuIsOpened"
+        >
+
+            <div class="product">PRODUCT</div>
+            <div class="features">FEATURES</div>
+            <div class="pricing">PRICING</div>
+    
+            <div class="divider"></div>
+    
+            <div class="login">LOGIN</div>
+        </div>
+
+</div>

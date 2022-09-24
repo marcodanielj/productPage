@@ -12,4 +12,15 @@ export class NavBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  menuIsOpened = false;
+
+  menuAction() {
+
+    if (this.menuIsOpened) {
+      this.menuIsOpened = false;
+    } else {
+      this.menuIsOpened = true;
+    }
+  }
+
 }
