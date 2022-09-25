@@ -9,24 +9,27 @@
     flex-wrap: wrap;
 
     gap: 0px;
-    
+
     .content {
         
         display: flex;
         position: relative;
         flex-direction: column;
+
+        padding-top: 3vh;
         padding-left: 7.5vw;
 
-        
+        margin-bottom: 30vh;
 
         gap: 20px;
 
         .productName {
+
             display: flex;
             flex-direction: row;
             width: 100%;
             align-items: center;
-            font-size: 1.1em;
+            font-size: 1em;
 
             .badge {
                 font-weight: 700;
@@ -53,7 +56,8 @@
             padding-bottom: 1vw;
 
             .title {
-                font-size: 2.6em;
+                font-size: 2em;
+                max-inline-size: 85vw;
                 line-height: 1em;
                 font-weight: 700;
                 color: $veryDarkBlue;
@@ -63,7 +67,7 @@
             .description {
 
                 font-family: 'Barlow', sans-serif;
-                font-size: 1.2em;
+                font-size: 1em;
                 max-inline-size: 75vw;
                 color: $darkGrayishBlue;
 
@@ -114,6 +118,10 @@
         
     }
 
+    .overflow {
+        margin-bottom: 0;
+    }
+
     .hero {
 
         position: relative;
@@ -144,7 +152,7 @@
 
             height: 30vh;
             top: 15vh;
-            padding-left: 2vw;
+            padding-left: 7.5vw;
 
         }
 
@@ -159,12 +167,17 @@
         flex-direction: row;
         justify-content: space-between;
 
+        align-items: flex-start;
+
+
         .content {
 
             padding-left: 7.5vw;
             max-width: 30vw;
 
-            padding-top: 10vh;
+            position: absolute;
+
+            padding-top: 30vh;
             
 
             .productInfo {
@@ -180,13 +193,12 @@
 
         .hero {
 
-            position: absolute;
+            position: relative;
             display: block;
             
             .background {
     
-                position: fixed;
-                
+                position: absolute;
 
                 width: 70vw;
                 height: 60vh;
@@ -200,7 +212,7 @@
     
             .image {
                 
-                position: fixed;
+                position: absolute;
                 height: 50vh;
                 top: 27vh;
                 left: 51vw;
