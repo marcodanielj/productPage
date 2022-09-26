@@ -2,12 +2,15 @@
 
     position: relative;
     display: flex;
+    height: 100vh;
+
 
     .navBar {
         position: absolute;
     }
 
     .home {
+        position: absolute;
         overflow-x: hidden;
     }
     

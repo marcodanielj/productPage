@@ -7,8 +7,13 @@
 
     flex-direction: row;
     flex-wrap: wrap;
+    
+    justify-content:flex-start;
+    align-items: flex-start;
 
     gap: 0px;
+
+    width: 100vw;
 
     .content {
         
@@ -16,10 +21,10 @@
         position: relative;
         flex-direction: column;
 
-        padding-top: 0vh;
+        padding-top: 52vh;
         padding-left: 7.5vw;
 
-        margin-bottom: 0vh;
+        padding-bottom: 40vh;
 
         gap: 20px;
 
@@ -81,6 +86,8 @@
             flex-direction: row;
             width: 100%;
 
+            font-size: .9em;
+
             align-items: center;
 
             .actionButton {
@@ -92,7 +99,6 @@
 
                 color: $lightGrayishBlue;
                 text-align: center;
-                font-size: .9em;
                 font-weight: 700;
                 letter-spacing: 1.2px;
 
@@ -108,7 +114,6 @@
                 
                 padding-left: 20px;
                 text-align: center;
-                font-size: .9em;
                 letter-spacing: 2px;
                 color: $grayishBlue;
 
@@ -124,11 +129,7 @@
 
     .hero {
 
-        position: relative;
-        display: flex;
-
-        width: 100vw;
-        height: 52vh;
+        position: absolute;
 
         .background {
 
@@ -136,9 +137,9 @@
             background-color: $lightGrayishBlue;
             
             width: 80vw;
-            height: 55vh;
+            height: 60vh;
 
-            top: -10%;
+            top: -10vh;
 
             border-radius: 60px;
 
@@ -160,64 +161,73 @@
 
     @media (min-width: 600px) {
 
-        height: 100vh;
-        max-width: 100vw;
-        align-items: center;
+        width: 100vw;
+
+        align-items: flex-start;
 
         flex-direction: row;
         justify-content: flex-start;
 
-        align-items: center;
-
 
         .content {
+
+            display: flex;
+            position: relative;
+            flex-direction: column;
 
             padding-left: 7.5vw;
             max-width: 30vw;
 
-            position: absolute;
+            padding-bottom: 30vh;
+            padding-top: 30vh;
 
-            padding-top: 0vh;
-            padding-bottom: 0vh;
-
-            margin-bottom: 0vh;
+            .productName {
+                font-size: 1em;
+            }
             
 
             .productInfo {
                 .title {
-                    font-size: 3em;
+                    font-size: 2em;
+                    max-inline-size: 100vw;
                 }
 
                 .description {
+                    font-size: 1em  ;
                     max-inline-size: 20vw;
                 }
+            }
+
+            .actions {
+                font-size: .9em;
+
             }
         }
 
         .hero {
 
-            position: relative;
-            display: block;
+            position: absolute;
             
             .background {
-    
-                position: absolute;
 
                 width: 70vw;
-                height: 60vh;
+                height: 80vh;
     
                 border-radius: 60px;
     
-                top: -30vh;
+                top: -20vh;
+
                 right: -20vw;
     
             }
     
             .image {
-                position: absolute;
-                height: 50vh;
-                top: 7vh;
-                left: 51vw;
+                
+                height: 20em;
+                top: 30vh;
+
+                padding-left: 60vw;
+
             }
             
         }
