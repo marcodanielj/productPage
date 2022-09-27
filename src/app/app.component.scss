@@ -1,3 +1,5 @@
+@import 'src/styles.scss';
+
 :host {
 
     position: relative;
@@ -9,9 +11,32 @@
         position: absolute;
     }
 
-    .home {
-        position: absolute;
-        overflow-x: hidden;
+    .content {
+
+        display: table;
+        position: relative;
+        flex-direction: column;
+
+        .home {
+            overflow-x: hidden;
+        }
+    
+        .disclaimer {
+
+            display: table-footer-group;
+            
+            width: 100vw;
+            
+            background-color: $lightGrayishBlue;
+            color: $grayishBlue;
+            
+            p {
+                text-align: center;
+                font-size: .8em;
+                padding: 2vh;
+                
+            }
+        }
     }
     
 }
