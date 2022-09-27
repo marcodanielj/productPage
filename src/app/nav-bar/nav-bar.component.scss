@@ -52,7 +52,7 @@
         .showDiv {
             display: block;
 
-            @media (min-width: 600px) {
+            @media (min-width: $sizeThreshold) {
                 display: none;
             }
     }
@@ -64,7 +64,7 @@
             visibility: hidden;
             opacity: 0;
 
-            transition: all 200ms ease-in-out ;
+            transition: visibility 200ms, opacity 200ms, top 200ms ease-in-out ;
 
             position: absolute;
             display: flex;
@@ -119,7 +119,7 @@
             top: 12vh;
         }
 
-        @media (min-width: 600px) {
+        @media (min-width: $sizeThreshold) {
 
             justify-content: space-between;
             align-items: center;
@@ -146,7 +146,7 @@
                 flex-direction: row;
                 align-items: center;
         
-                gap: 50px;
+                gap: 5vw;
                 padding-top: 0px;
                 padding-bottom: 0px;
         
